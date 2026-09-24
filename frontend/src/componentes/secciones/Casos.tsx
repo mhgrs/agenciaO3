@@ -7,7 +7,8 @@ export function Casos() {
     <section className="bg-primary text-on-primary py-[clamp(90px,18vw,280px)] px-5 md:px-16 overflow-hidden">
       <div className="max-w-[1240px] mx-auto flex flex-col items-center justify-center text-center">
         <motion.div 
-          whileInView={{ opacity: [0, 1], scale: [0.95, 1] }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="w-full"
@@ -17,7 +18,8 @@ export function Casos() {
           </h2>
           
           <motion.div 
-            whileInView={{ opacity: [0, 1], y: [20, 0] }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-12 flex justify-center"

@@ -22,7 +22,7 @@ export function Hero() {
       {/* Gradientes oscuros para legibilidad */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/600 to-background/70 z-10" />
       
-      <div className="relative w-full max-w-[1240px] mt-50 md:ms-10  z-20">
+      <div className="relative w-full max-w-[1240px] mt-50 ms-10  z-20">
         <motion.div 
           animate={{ opacity: [0, 1], y: [10, 0] }}
           transition={{ duration: 0.8, delay: 0.1 }}

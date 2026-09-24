@@ -13,7 +13,8 @@ export function Sistema() {
     <section id="equipo" className="bg-background py-[clamp(90px,14vw,210px)] px-5 md:px-16">
       <div className="max-w-[1240px] mx-auto">
         <motion.div 
-          whileInView={{ opacity: [0, 1] }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-label text-accent mb-[clamp(28px,4vw,44px)]"
         >
@@ -21,7 +22,8 @@ export function Sistema() {
         </motion.div>
         
         <motion.h2 
-          whileInView={{ opacity: [0, 1], y: [20, 0] }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-[clamp(32px,5.6vw,76px)] font-extralight leading-[1.02] tracking-[-0.03em] mb-[clamp(56px,9vw,120px)] max-w-[20ch] text-primary flex flex-col"
@@ -36,7 +38,8 @@ export function Sistema() {
           {disciplinas.map((d, i) => (
             <motion.div 
               key={d.num}
-              whileInView={{ opacity: [0, 1], x: [-20, 0] }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`grid grid-cols-1 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.2fr)_minmax(0,1fr)] gap-[clamp(20px,3vw,48px)] items-baseline border-t border-border py-[clamp(26px,3.4vw,40px)] ${i === disciplinas.length - 1 ? 'border-b' : ''}`}
@@ -50,7 +53,8 @@ export function Sistema() {
 
         <div className="mt-[clamp(56px,9vw,120px)] grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,6vw,90px)] items-end">
           <motion.div
-            whileInView={{ opacity: [0, 1] }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             <div className="text-[clamp(26px,3.4vw,44px)] font-extralight tracking-[-0.02em] leading-[1.1] text-primary">
@@ -60,7 +64,8 @@ export function Sistema() {
           </motion.div>
           
           <motion.div
-             whileInView={{ opacity: [0, 1] }}
+             initial={{ opacity: 0 }}
+             whileInView={{ opacity: 1 }}
              viewport={{ once: true }}
              transition={{ delay: 0.3 }}
           >

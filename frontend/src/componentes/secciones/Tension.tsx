@@ -7,8 +7,9 @@ export function Tension() {
     <section id="entrenamiento" className="bg-secondary text-on-secondary py-[clamp(90px,16vw,220px)] px-5 md:px-16">
       <div className="max-w-[1240px] mx-auto">
         <motion.div 
-          whileInView={{ opacity: [0, 1] }}
-          viewport={{ once: true, margin: "-100px" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "0px" }}
           className="text-label text-muted-text mb-[clamp(40px,7vw,90px)]"
         >
           [ ENTRENAMIENTO EXCLUSIVO ]
@@ -17,15 +18,17 @@ export function Tension() {
         <div className="grid md:grid-cols-2 gap-[clamp(40px,8vw,120px)] items-start">
           <div>
             <motion.h2 
-              whileInView={{ opacity: [0, 1], y: [20, 0] }}
-              viewport={{ once: true, margin: "-100px" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.8 }}
               className="text-[clamp(30px,5vw,60px)] font-extralight leading-[1.02] tracking-[-0.03em] max-w-[14ch] mb-8"
             >
               ES PARA TI SI...
             </motion.h2>
             <motion.ul 
-              whileInView={{ opacity: [0, 1] }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
               className="font-serif text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4"
@@ -39,15 +42,17 @@ export function Tension() {
           
           <div className="md:mt-20">
             <motion.h2 
-              whileInView={{ opacity: [0, 1], y: [20, 0] }}
-              viewport={{ once: true, margin: "-100px" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-[clamp(30px,5vw,60px)] font-extralight leading-[1.02] tracking-[-0.03em] max-w-[14ch] text-muted-text mb-8 md:text-right md:ml-auto"
             >
               NO ES PARA TI SI...
             </motion.h2>
             <motion.ul 
-              whileInView={{ opacity: [0, 1] }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.5 }}
               className="font-serif text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4 text-muted-text md:text-right"

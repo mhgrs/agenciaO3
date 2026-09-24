@@ -40,7 +40,8 @@ export function CTA() {
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,6vw,90px)] items-start">
         
         <motion.div 
-          whileInView={{ opacity: [0, 1], y: [20, 0] }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-[clamp(38px,7vw,96px)] font-extralight leading-[0.98] tracking-[-0.035em] flex flex-col"
@@ -51,7 +52,8 @@ export function CTA() {
         </motion.div>
         
         <motion.div
-          whileInView={{ opacity: [0, 1], y: [20, 0] }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="bg-background p-8 border border-border"
