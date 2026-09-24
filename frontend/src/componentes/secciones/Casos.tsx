@@ -24,13 +24,25 @@ export function Casos() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-12 flex justify-center"
           >
-            <a 
+            <motion.a 
               href="#agendar" 
-              className="inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-colors min-h-[44px]"
+              className="relative overflow-hidden group inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-colors min-h-[44px]"
             >
-              <span>VAMOS AL SIGUIENTE NIVEL</span>
-              <span className="text-accent">↓</span>
-            </a>
+              <motion.div
+                initial={{ left: "-150%" }}
+                whileInView={{ left: ["-150%", "200%", "200%"] }}
+                viewport={{ once: false }}
+                transition={{ 
+                  duration: 25, 
+                  times: [0, 0.25, 5], 
+                  ease: "easeInOut",
+                  repeat: Infinity
+                }}
+                className="absolute top-0 bottom-0 w-[150%] bg-gradient-to-r from-transparent via-[#cc9d25]/60 to-transparent skew-x-[-30deg] z-0"
+              />
+              <span className="relative z-10">VAMOS AL SIGUIENTE NIVEL</span>
+              <span className="relative z-10 text-accent group-hover:text-primary transition-colors">↓</span>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

@@ -36,15 +36,16 @@ export function CTA() {
   };
 
   return (
-    <section id="agendar" className="bg-secondary text-on-secondary py-[clamp(90px,15vw,210px)] px-5 md:px-16">
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,6vw,90px)] items-start">
+    <section id="agendar" className="bg-secondary text-on-secondary py-[clamp(90px,15vw,120px)] px-5 md:px-16">
+
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 gap-[clamp(40px,6vw,90px)] items-start">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[clamp(38px,7vw,96px)] font-extralight leading-[0.98] tracking-[-0.035em] flex flex-col"
+          className="text-[clamp(30px,7vw,70px)] min-w-0 font-extralight leading-[0.98] tracking-[-0.035em] flex flex-col break-words hyphens-auto"
         >
           <span>PROGRAMA</span>
           <span>DE TRANSFORMACIÓN.</span>
@@ -67,7 +68,7 @@ export function CTA() {
             <form onSubmit={manejarEnvio} className="space-y-6 text-primary" noValidate>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="nombre" className="block text-[10px] tracking-[0.2em] mb-2 text-muted-foreground">NOMBRE</label>
+                  <label htmlFor="nombre" className="block text-[10px] tracking-[0.2em] mb-2 text-white text-muted-foreground">NOMBRE</label>
                   <input
                     type="text"
                     id="nombre"
@@ -81,7 +82,7 @@ export function CTA() {
                 </div>
                 
                 <div>
-                  <label htmlFor="correo" className="block text-[10px] tracking-[0.2em] mb-2 text-muted-foreground">EMAIL</label>
+                  <label htmlFor="correo" className="block text-[10px] text-white  tracking-[0.2em] mb-2 text-muted-foreground">EMAIL</label>
                   <input
                     type="email"
                     id="correo"
@@ -97,7 +98,7 @@ export function CTA() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="telefono" className="block text-[10px] tracking-[0.2em] mb-2 text-muted-foreground">TELÉFONO</label>
+                  <label htmlFor="telefono" className="block text-[10px] text-white  tracking-[0.2em] mb-2 text-muted-foreground">TELÉFONO</label>
                   <input
                     type="tel"
                     id="telefono"
@@ -111,7 +112,7 @@ export function CTA() {
                 </div>
 
                 <div>
-                  <label htmlFor="facturacion" className="block text-[10px] tracking-[0.2em] mb-2 text-muted-foreground">FACTURACIÓN MENSUAL</label>
+                  <label htmlFor="facturacion" className="block text-[10px] tracking-[0.2em] text-white  mb-2 text-muted-foreground">FACTURACIÓN MENSUAL</label>
                   <select
                     id="facturacion"
                     className={`w-full px-0 py-3 border-b bg-transparent rounded-none ${errores.facturacion ? 'border-red-500' : 'border-border'} focus:outline-none focus:border-accent text-sm font-sans appearance-none`}
