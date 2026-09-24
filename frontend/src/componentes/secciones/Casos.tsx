@@ -35,7 +35,7 @@ export function Casos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[clamp(32px,5vw,68px)] leading-[1.02] tracking-[-0.03em] mb-[clamp(50px,8vw,110px)] flex flex-col md:flex-row md:gap-4"
+          className="text-[clamp(32px,5vw,68px)] font-extralight leading-[1.02] tracking-[-0.03em] mb-[clamp(50px,8vw,110px)] flex flex-col md:flex-row md:gap-4"
         >
           <span className="flex flex-col">
             <span>RESULTADOS</span>
