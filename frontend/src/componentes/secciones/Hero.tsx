@@ -23,7 +23,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[85vh] -mt-[94px] pt-[150px] pb-12 px-5 md:px-16 flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] pt-[150px] pb-12 px-5 md:px-16 flex flex-col justify-center overflow-hidden">
       
       {/* Fondo de video Wistia dividido en 2 partes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none bg-background">

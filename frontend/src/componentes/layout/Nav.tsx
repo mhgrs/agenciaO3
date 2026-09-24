@@ -1,13 +1,24 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="relative z-50 flex items-center justify-between px-5 py-7 md:px-16">
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-7 md:px-16 transition-all duration-300 ${
+      isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+    }`}>
       <div className="flex items-start gap-1 text-primary">
         <div className="w-[26px] h-[26px] border-[5.5px] border-primary rounded-full box-border" />
         <div className="text-[12px] font-medium leading-none">3</div>
