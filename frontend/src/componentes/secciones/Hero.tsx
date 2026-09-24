@@ -4,12 +4,11 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 export function Hero() {
-  const [isPlayingPart2, setIsPlayingPart2] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
 
   const handlePart1Ended = () => {
-    setIsPlayingPart2(true);
     if (video2Ref.current) {
       video2Ref.current.currentTime = 0;
       video2Ref.current.play();
@@ -17,7 +16,6 @@ export function Hero() {
   };
 
   const handlePart2Ended = () => {
-    setIsPlayingPart2(false);
     if (video1Ref.current) {
       video1Ref.current.currentTime = 0;
       video1Ref.current.play();
@@ -28,14 +26,16 @@ export function Hero() {
     <section className="relative min-h-[85vh] -mt-[94px] pt-[150px] pb-12 px-5 md:px-16 flex flex-col justify-center overflow-hidden">
       
       {/* Fondo de video Wistia dividido en 2 partes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 bg-background">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none bg-background">
+        
         {/* PARTE 2 */}
         <video
           ref={video2Ref}
           muted
           playsInline
           onEnded={handlePart2Ended}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${isPlayingPart2 ? 'opacity-100' : 'opacity-0'}`}
+          onPlaying={() => setActiveVideo(2)}
+          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${activeVideo === 2 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
         >
           <source src="/hero-bg-2.mp4" type="video/mp4" />
         </video>
@@ -47,7 +47,8 @@ export function Hero() {
           muted
           playsInline
           onEnded={handlePart1Ended}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${isPlayingPart2 ? 'opacity-0' : 'opacity-100'}`}
+          onPlaying={() => setActiveVideo(1)}
+          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${activeVideo === 1 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
         >
           <source src="/hero-bg-1.mp4" type="video/mp4" />
         </video>
