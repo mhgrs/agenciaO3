@@ -10,7 +10,7 @@
   --color-secondary: #F2EFE8;
   --color-on-secondary: #111111;
   
-  --color-accent: #cc9d25;
+  --color-accent: #B8A88A;
   --color-on-accent: #050505;
   
   --color-muted: #111111;
@@ -56,35 +56,5 @@
     font-size: 10px;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-  }
-
-  /* Animación de brillo dorado para el botón */
-  @keyframes goldenShine {
-    0% { left: -100%; opacity: 0; }
-    20% { opacity: 1; }
-    80% { left: 150%; opacity: 0; }
-    100% { left: 150%; opacity: 0; }
-  }
-
-  .golden-shine {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .golden-shine::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      color-mix(in srgb, var(--color-accent) 80%, transparent),
-      transparent
-    );
-    transform: skewX(-25deg);
-    animation: goldenShine 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

@@ -26,10 +26,10 @@ export function Casos() {
           >
             <a 
               href="#agendar" 
-              className="golden-shine inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-colors min-h-[44px]"
+              className="inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-colors min-h-[44px]"
             >
               <span>VAMOS AL SIGUIENTE NIVEL</span>
-              <span className="text-black">↓</span>
+              <span className="text-accent">↓</span>
             </a>
           </motion.div>
         </motion.div>
