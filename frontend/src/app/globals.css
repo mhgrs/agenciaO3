@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-foreground: #FAF9F6;
+  
+  --color-primary: #FAF9F6;
+  --color-on-primary: #050505;
+  
+  --color-secondary: #F2EFE8;
+  --color-on-secondary: #111111;
+  
+  --color-accent: #B8A88A;
+  --color-on-accent: #050505;
+  
+  --color-muted: #111111;
+  --color-muted-foreground: #A6A39D;
+  --color-muted-text: #706E69;
+  
+  --color-border: #2A2A28;
+  --color-border-light: #D6D2C7;
+  
+  --font-sans: "Manrope", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  
+  /* Utilidades para los textos pequeños (labels/nav) con gran espaciado */
+  .text-label {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+  }
+  
+  .text-nav {
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+}
