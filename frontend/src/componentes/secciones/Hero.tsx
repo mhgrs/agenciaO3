@@ -35,7 +35,7 @@ export function Hero() {
           playsInline
           onEnded={handlePart2Ended}
           onPlaying={() => setActiveVideo(2)}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${activeVideo === 2 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
+          className={`absolute inset-0 w-full h-full object-cover object-[75%_center] ${activeVideo === 2 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
         >
           <source src="/hero-bg-2.mp4" type="video/mp4" />
         </video>
@@ -48,7 +48,7 @@ export function Hero() {
           playsInline
           onEnded={handlePart1Ended}
           onPlaying={() => setActiveVideo(1)}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${activeVideo === 1 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
+          className={`absolute inset-0 w-full h-full object-cover object-center ${activeVideo === 1 ? 'z-10 opacity-100' : 'z-0 opacity-0'}`}
         >
           <source src="/hero-bg-1.mp4" type="video/mp4" />
         </video>
