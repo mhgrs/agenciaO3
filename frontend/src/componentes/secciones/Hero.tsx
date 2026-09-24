@@ -24,8 +24,7 @@ export function Hero() {
       
       <div className="relative w-full max-w-[1240px] mt-50 ms-10  z-20">
         <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: [0, 1], y: [10, 0] }}
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-label text-accent mb-6 md:mb-8"
         >
@@ -33,8 +32,7 @@ export function Hero() {
         </motion.div>
         
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: [0, 1], y: [20, 0] }}
           transition={{ duration: 1, delay: 0.2 }}
           className="text-[clamp(40px,7vw,120px)] font-sans font-extralight leading-[1.05] tracking-[-0.02em] text-primary mb-8 md:mb-12 max-w-[18ch]"
         >
@@ -43,8 +41,7 @@ export function Hero() {
         
         <div className="flex flex-col items-start gap-8 mt-12">
           <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: [0, 1] }}
             transition={{ duration: 1, delay: 1 }}
             className="font-serif text-[clamp(19px,2.4vw,30px)] leading-[1.4] text-secondary m-0 flex flex-col max-w-[30ch]"
           >
@@ -56,8 +53,7 @@ export function Hero() {
           
           <motion.a 
             href="#agendar" 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: [0, 1], y: [10, 0] }}
             transition={{ duration: 1, delay: 1.5 }}
             className="text-[10px] tracking-[0.3em] text-primary border-b border-accent pb-2 whitespace-nowrap mt-4"
           >
