@@ -35,7 +35,7 @@ export function Hero() {
           muted
           playsInline
           onEnded={handlePart2Ended}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover transition-opacity duration-500 ${isPlayingPart2 ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${isPlayingPart2 ? 'opacity-100' : 'opacity-0'}`}
         >
           <source src="/hero-bg-2.mp4" type="video/mp4" />
         </video>
@@ -47,7 +47,7 @@ export function Hero() {
           muted
           playsInline
           onEnded={handlePart1Ended}
-          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover transition-opacity duration-300 ${isPlayingPart2 ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover ${isPlayingPart2 ? 'opacity-0' : 'opacity-100'}`}
         >
           <source src="/hero-bg-1.mp4" type="video/mp4" />
         </video>
