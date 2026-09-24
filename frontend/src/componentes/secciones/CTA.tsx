@@ -74,8 +74,10 @@ export function CTA() {
                     className={`w-full px-0 py-3 border-b bg-transparent rounded-none ${errores.nombre ? 'border-red-500' : 'border-border'} focus:outline-none focus:border-accent text-sm font-sans`}
                     value={datosFormulario.nombre}
                     onChange={(e) => setDatosFormulario({...datosFormulario, nombre: e.target.value})}
+                    aria-invalid={!!errores.nombre}
+                    aria-describedby={errores.nombre ? "error-nombre" : undefined}
                   />
-                  {errores.nombre && <p className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.nombre}</p>}
+                  {errores.nombre && <p id="error-nombre" role="alert" className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.nombre}</p>}
                 </div>
                 
                 <div>
@@ -86,8 +88,10 @@ export function CTA() {
                     className={`w-full px-0 py-3 border-b bg-transparent rounded-none ${errores.correo ? 'border-red-500' : 'border-border'} focus:outline-none focus:border-accent text-sm font-sans`}
                     value={datosFormulario.correo}
                     onChange={(e) => setDatosFormulario({...datosFormulario, correo: e.target.value})}
+                    aria-invalid={!!errores.correo}
+                    aria-describedby={errores.correo ? "error-correo" : undefined}
                   />
-                  {errores.correo && <p className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.correo}</p>}
+                  {errores.correo && <p id="error-correo" role="alert" className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.correo}</p>}
                 </div>
               </div>
 
@@ -100,8 +104,10 @@ export function CTA() {
                     className={`w-full px-0 py-3 border-b bg-transparent rounded-none ${errores.telefono ? 'border-red-500' : 'border-border'} focus:outline-none focus:border-accent text-sm font-sans`}
                     value={datosFormulario.telefono}
                     onChange={(e) => setDatosFormulario({...datosFormulario, telefono: e.target.value})}
+                    aria-invalid={!!errores.telefono}
+                    aria-describedby={errores.telefono ? "error-telefono" : undefined}
                   />
-                  {errores.telefono && <p className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.telefono}</p>}
+                  {errores.telefono && <p id="error-telefono" role="alert" className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.telefono}</p>}
                 </div>
 
                 <div>
@@ -111,6 +117,8 @@ export function CTA() {
                     className={`w-full px-0 py-3 border-b bg-transparent rounded-none ${errores.facturacion ? 'border-red-500' : 'border-border'} focus:outline-none focus:border-accent text-sm font-sans appearance-none`}
                     value={datosFormulario.facturacion}
                     onChange={(e) => setDatosFormulario({...datosFormulario, facturacion: e.target.value})}
+                    aria-invalid={!!errores.facturacion}
+                    aria-describedby={errores.facturacion ? "error-facturacion" : undefined}
                   >
                     <option value="" className="text-background">Seleccionar...</option>
                     <option value="menos_15k" className="text-background">Menos de $15.000 USD</option>
@@ -118,13 +126,13 @@ export function CTA() {
                     <option value="50k_100k" className="text-background">$50.000 - $100.000 USD</option>
                     <option value="mas_100k" className="text-background">Más de $100.000 USD</option>
                   </select>
-                  {errores.facturacion && <p className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.facturacion}</p>}
+                  {errores.facturacion && <p id="error-facturacion" role="alert" className="text-red-500 text-[10px] mt-1 tracking-widest">{errores.facturacion}</p>}
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full mt-6 text-[11px] tracking-[0.3em] text-primary border-b border-primary pb-3 hover:text-accent hover:border-accent transition-colors flex justify-between"
+                className="w-full mt-6 text-[11px] tracking-[0.3em] text-primary border-b border-primary py-4 hover:text-accent hover:border-accent transition-colors flex justify-between items-center min-h-[44px]"
               >
                 <span>SOLICITAR AGENDA AHORA</span>
                 <span>→</span>

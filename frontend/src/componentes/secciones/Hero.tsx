@@ -36,7 +36,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-[clamp(40px,7vw,120px)] leading-[0.9] tracking-[-0.035em] text-primary mb-8 md:mb-12 max-w-[18ch]"
+          className="text-[clamp(40px,7vw,120px)] font-sans font-extralight leading-[0.9] tracking-[-0.035em] text-primary mb-8 md:mb-12 max-w-[18ch]"
         >
           ¿ESTÁS REGALANDO CLIENTES A TU COMPETENCIA?
         </motion.h1>

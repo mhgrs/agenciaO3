@@ -14,8 +14,8 @@ export function Footer() {
         </div>
         
         <div className="text-[10px] tracking-[0.26em] text-muted-foreground leading-[2.2]">
-          <a href="mailto:agencia@o3.cl" className="hover:text-primary transition-colors block">AGENCIA@O3.CL</a>
-          <a href="https://www.o3.cl" className="hover:text-primary transition-colors block">O3.CL</a>
+          <a href="mailto:agencia@o3.cl" className="py-3 hover:text-primary transition-colors block">AGENCIA@O3.CL</a>
+          <a href="https://www.o3.cl" className="py-3 hover:text-primary transition-colors block">O3.CL</a>
         </div>
         
         <div className="basis-full flex flex-wrap gap-x-8 gap-y-4 border-t border-border pt-4 mt-2 text-[10px] tracking-[0.26em] text-muted-foreground">
