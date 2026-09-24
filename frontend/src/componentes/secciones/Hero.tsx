@@ -5,12 +5,22 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   const [isPlayingPart2, setIsPlayingPart2] = useState(false);
+  const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
 
   const handlePart1Ended = () => {
     setIsPlayingPart2(true);
     if (video2Ref.current) {
+      video2Ref.current.currentTime = 0;
       video2Ref.current.play();
+    }
+  };
+
+  const handlePart2Ended = () => {
+    setIsPlayingPart2(false);
+    if (video1Ref.current) {
+      video1Ref.current.currentTime = 0;
+      video1Ref.current.play();
     }
   };
 
@@ -19,12 +29,12 @@ export function Hero() {
       
       {/* Fondo de video Wistia dividido en 2 partes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 bg-background">
-        {/* PARTE 2: Loop eterno (se mantiene debajo hasta que se activa) */}
+        {/* PARTE 2 */}
         <video
           ref={video2Ref}
-          loop
           muted
           playsInline
+          onEnded={handlePart2Ended}
           className={`absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover transition-opacity duration-500 ${isPlayingPart2 ? 'opacity-100' : 'opacity-0'}`}
         >
           <source src="/hero-bg-2.mp4" type="video/mp4" />
@@ -32,6 +42,7 @@ export function Hero() {
 
         {/* PARTE 1: Intro */}
         <video
+          ref={video1Ref}
           autoPlay
           muted
           playsInline
