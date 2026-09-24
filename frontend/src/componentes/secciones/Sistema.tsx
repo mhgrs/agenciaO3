@@ -26,7 +26,7 @@ export function Sistema() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[clamp(32px,5.6vw,76px)] font-extralight leading-[1.02] tracking-[-0.03em] mb-[clamp(56px,9vw,120px)] max-w-[20ch] text-primary flex flex-col"
+          className="text-[clamp(32px,5.6vw,76px)] font-serif leading-[1.02] tracking-[-0.03em] mb-[clamp(56px,9vw,120px)] max-w-[20ch] text-primary flex flex-col"
         >
           <span>REUNIMOS</span>
           <span>A EXPERTOS EN</span>
@@ -44,7 +44,7 @@ export function Sistema() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`grid grid-cols-1 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.2fr)_minmax(0,1fr)] gap-[clamp(20px,3vw,48px)] items-baseline border-t border-border py-[clamp(26px,3.4vw,40px)] ${i === disciplinas.length - 1 ? 'border-b' : ''}`}
             >
-              <div className="text-[clamp(34px,5vw,68px)] font-extralight text-muted-text tracking-[-0.03em] leading-none">{d.num}</div>
+              <div className="text-[clamp(34px,5vw,68px)] font-serif text-muted-text tracking-[-0.03em] leading-none">{d.num}</div>
               <div className="text-[clamp(18px,2.2vw,27px)] font-normal tracking-[0.02em] text-primary">{d.nombre}</div>
               <div className="text-[clamp(14px,1.5vw,17px)] leading-[1.7] text-muted-foreground">{d.desc}</div>
             </motion.div>
@@ -57,7 +57,7 @@ export function Sistema() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className="text-[clamp(26px,3.4vw,44px)] font-extralight tracking-[-0.02em] leading-[1.1] text-primary">
+            <div className="text-[clamp(26px,3.4vw,44px)] font-serif tracking-[-0.02em] leading-[1.1] text-primary">
               PUBLICISTAS VISIONARIOS.<br />PERIODISTAS ESTRATÉGICOS.
             </div>
             <div className="text-label text-accent mt-6">DIFERENTES TALENTOS, UN MISMO OBJETIVO.</div>
@@ -74,7 +74,7 @@ export function Sistema() {
               <span>Llevamos tu negocio al siguiente nivel.</span>
             </p>
             <div className="border-t border-border pt-[22px]">
-              <div className="text-[clamp(26px,3.2vw,40px)] font-extralight tracking-[-0.02em] text-primary leading-none">
+              <div className="text-[clamp(26px,3.2vw,40px)] font-serif tracking-[-0.02em] text-primary leading-none">
                 20 años
               </div>
               <div className="text-[10px] tracking-[0.3em] text-muted-foreground mt-3">DE EXPERIENCIA AYUDANDO A EMPRESAS B2C</div>

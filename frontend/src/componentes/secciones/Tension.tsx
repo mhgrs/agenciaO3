@@ -17,15 +17,15 @@ export function Tension() {
         
         <div className="grid md:grid-cols-2 gap-[clamp(40px,8vw,120px)] items-start">
           <div>
-            <motion.div 
+            <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="text-[clamp(30px,5vw,60px)] font-extralight leading-[1.02] tracking-[-0.03em] max-w-[14ch] mb-8"
+              className="text-[clamp(30px,5vw,60px)] leading-[1.02] tracking-[-0.03em] max-w-[14ch] mb-8"
             >
               ES PARA TI SI...
-            </motion.div>
+            </motion.h2>
             <motion.ul 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -41,15 +41,15 @@ export function Tension() {
           </div>
           
           <div className="md:mt-32">
-            <motion.div 
+            <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-[clamp(30px,5vw,60px)] font-extralight leading-[1.02] tracking-[-0.03em] max-w-[14ch] text-muted-text mb-8 md:text-right md:ml-auto"
+              className="text-[clamp(30px,5vw,60px)] leading-[1.02] tracking-[-0.03em] max-w-[14ch] text-muted-text mb-8 md:text-right md:ml-auto"
             >
               NO ES PARA TI SI...
-            </motion.div>
+            </motion.h2>
             <motion.ul 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

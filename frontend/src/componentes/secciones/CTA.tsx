@@ -44,7 +44,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[clamp(38px,7vw,96px)] font-extralight leading-[0.98] tracking-[-0.035em] flex flex-col"
+          className="text-[clamp(38px,7vw,96px)] font-serif leading-[0.98] tracking-[-0.035em] flex flex-col"
         >
           <span>PROGRAMA</span>
           <span>DE TRANSFORMACIÓN.</span>
