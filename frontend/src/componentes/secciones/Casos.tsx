@@ -3,61 +3,85 @@
 import { motion } from "framer-motion";
 
 export function Casos() {
-  // CONFIGURACIÓN DE LA LUZ DEL BOTÓN
-  const tiempoDeCruce = 1.5; 
-  const tiempoDeEspera = 50; 
-
-  // ¡NO TOCAR ESTO! Es necesario para que Framer Motion no se rompa:
-  const duracionTotal = tiempoDeCruce + tiempoDeEspera;
-  const porcentajeCruce = tiempoDeCruce / duracionTotal;
-
   return (
-    <section className="bg-primary text-on-primary py-[clamp(90px,18vw,250px)] px-5 md:px-16 overflow-hidden">
-      <div className="max-w-[1240px] mx-auto flex flex-col items-center justify-center text-center">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+    <section id="casos" className="bg-background text-primary py-[clamp(300px,15vw,350px)] px-5 md:px-16 border-t border-border">
+      <div className="max-w-[1200px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full"
+          transition={{ duration: 0.8 }}
+          className="mb-16 md:mb-24 text-center md:text-left"
         >
-          <h2 className="text-[clamp(60px,12vw,220px)] font-extralight leading-[0.85] tracking-[-0.04em] text-on-primary mb-6">
-            ¿LISTO PARA<br/>
+          <h2 className="text-[clamp(30px,5vw,50px)] font-extralight leading-[1.1] tracking-[-0.035em]">
+            CASOS DE <span className="text-accent font-inter">ÉXITO.</span>
           </h2>
-          <h2 className="text-[clamp(60px,12vw,220px)] font-extralight leading-[0.85] tracking-[-0.04em] text-on-primary mb-25">
-            COMENZAR?
-          </h2>
-          
+          <p className="text-muted-foreground mt-4 max-w-xl text-sm md:text-base font-sans mx-auto md:mx-0">
+            Resultados reales. Empresas que ya transformaron su trayectoria comercial con nuestro sistema.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <a href="https://oneevolution.cl/" target="_blank" rel="noopener noreferrer">
+          {/* CASO 1: ONE EVOLUTION */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-12 flex justify-center"
+            className="group relative border border-border p-8 md:p-12 hover:border-accent transition-colors duration-500 bg-white/5 flex flex-col"
           >
-            <motion.a 
-              href="#agendar" 
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative overflow-hidden bg-black text-white group inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-all duration-300 min-h-[44px]"
-            >
-              <motion.div
-                initial={{ left: "-150%" }}
-                whileInView={{ left: ["-150%", "200%", "200%"] }}
-                viewport={{ once: false }}
-                transition={{ 
-                  duration: duracionTotal, 
-                  times: [0, porcentajeCruce, 1], 
-                  ease: "easeInOut",
-                  repeat: Infinity
-                }}
-                className="absolute top-0 bottom-0 w-[150%] bg-gradient-to-r from-transparent via-[#cc9d25]/60 to-transparent skew-x-[-30deg] z-0"
-              />
-              <span className="relative z-10 ">VAMOS AL SIGUIENTE NIVEL</span>
-              <span className="relative z-10 text-primary transition-colors">↓</span>
-            </motion.a>
+            <div className="absolute top-0 right-0 p-6 text-accent opacity-0 group-hover:opacity-100 hover:text-xl transition-opacity duration-500">
+              ↗
+            </div>
+            <h3 className="text-2xl md:text-3xl font-inter mb-4 text-white">One Evolution</h3>
+            <p className="text-muted-foreground text-sm font-sans mb-12 leading-relaxed">
+              Redefinimos su posicionamiento, mensaje y presencia. Resultado: +340% en consultas en solo 90 días.
+            </p>
+            
           </motion.div>
+          </a>
+          <a href="https://ingesoftware.cl/" target="_blank" rel="noopener noreferrer">
+          {/* CASO 2: INGESOFTWARE */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="group relative border border-border p-8 md:p-12 hover:border-accent transition-colors duration-500 bg-white/5 flex flex-col"
+          >
+            <div className="absolute top-0 right-0 p-6 text-accent opacity-0 group-hover:opacity-100 hover:text-xl transition-opacity duration-500">
+              ↗
+            </div>
+            <h3 className="text-2xl md:text-3xl font-inter mb-4 text-white">Ingesoftware</h3>
+            <p className="text-muted-foreground text-sm font-sans mb-12 leading-relaxed">
+              En solo 30 días, empezaron a recibir clientes que llegaban directamente pidiendo sus servicios.
+            </p>
+          
+          </motion.div>
+          </a>
+          
+        </div>
+
+        {/* DISCLAIMER Y CIERRE */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-24 md:mt-32 text-center flex flex-col items-center"
+        >
+          <h2 className="text-[clamp(30px,5vw,50px)] font-inter font-extralight leading-[1.1] tracking-[-0.035em] text-white">
+            CASUALIDAD: <span className="text-accent">IMPOSIBLE.</span>
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-xl text-sm md:text-base font-sans mx-auto">
+            Resultado predecible de una metodología que funciona una y otra vez.
+          </p>
+          <p className="mt-16 text-[10px] leading-relaxed tracking-widest text-white/30 uppercase max-w-xl mx-auto">
+            Los resultados de nuestros clientes son únicos y dependen de muchos factores. Solo los compartimos como referencia, no como garantía.
+          </p>
         </motion.div>
+
       </div>
     </section>
   );

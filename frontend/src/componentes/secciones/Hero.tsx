@@ -97,7 +97,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 1.5 }}
             className="text-[10px] tracking-[0.3em] text-primary border-b border-accent pb-2 whitespace-nowrap mt-4"
           >
-            AGENDAR UNA LLAMADA ↓
+            Ver video ↓
           </motion.a>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Hero } from "@/componentes/secciones/Hero";
 import { Tension } from "@/componentes/secciones/Tension";
 import { Sistema } from "@/componentes/secciones/Sistema";
 import { Casos } from "@/componentes/secciones/Casos";
+import { Ready } from "@/componentes/secciones/Ready";
 import { CTA } from "@/componentes/secciones/CTA";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Tension />
         <Sistema />
         <Casos />
+        <Ready />
         <CTA />
       </main>
       <Footer />

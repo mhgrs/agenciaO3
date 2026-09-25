@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export function CTA() {
@@ -13,6 +13,7 @@ export function CTA() {
   
   const [errores, setErrores] = useState<Record<string, string>>({});
   const [enviado, setEnviado] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   const validarFormulario = () => {
     const nuevosErrores: Record<string, string> = {};
@@ -32,6 +33,7 @@ export function CTA() {
     if (validarFormulario()) {
       console.log("Datos enviados:", datosFormulario);
       setEnviado(true);
+      setShowVideo(true);
     }
   };
 
@@ -60,9 +62,17 @@ export function CTA() {
           className="bg-background p-8 border border-border"
         >
           {enviado ? (
-            <div className="text-center py-12 text-primary">
+            <div className="text-center py-16 flex flex-col items-center justify-center text-primary h-full">
               <h3 className="text-2xl font-inter mb-2">¡Solicitud Recibida!</h3>
-              <p className="text-muted-foreground text-sm font-sans">Nos pondremos en contacto contigo a la brevedad.</p>
+              <p className="text-muted-foreground text-sm font-sans mb-10">Nos pondremos en contacto contigo a la brevedad.</p>
+              
+              <button
+                onClick={() => setShowVideo(true)}
+                className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 px-6 py-4 hover:bg-white/10 transition-colors rounded-sm"
+              >
+                <span className="text-[12px] tracking-widest text-white">VOLVER A VER EL VIDEO</span>
+                <span className="text-accent group-hover:text-primary transition-colors"></span>
+              </button>
             </div>
           ) : (
             <form onSubmit={manejarEnvio} className="space-y-8 text-primary mt-4" noValidate>
@@ -149,6 +159,39 @@ export function CTA() {
         </motion.div>
         
       </div>
+
+      <AnimatePresence>
+        {showVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm px-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative w-full max-w-5xl bg-background border border-border rounded-lg overflow-hidden shadow-2xl"
+            >
+              <button 
+                onClick={() => setShowVideo(false)}
+                className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors border border-white/10"
+              >
+                ✕
+              </button>
+              
+              <div className="relative w-full aspect-video bg-black">
+                <iframe 
+                  src="https://fast.wistia.net/embed/iframe/ugj5myy2h0?autoplay=1" 
+                  allow="autoplay; fullscreen" 
+                  className="absolute inset-0 w-full h-full border-none"
+                ></iframe>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
