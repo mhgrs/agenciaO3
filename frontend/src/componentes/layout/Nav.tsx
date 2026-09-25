@@ -1,24 +1,30 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // Transición suave basada en el scroll (de 0 a 300px de scroll)
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 700],
+    ["rgba(5, 5, 5, 0)", "rgba(5, 5, 5, 0.95)"] // De transparente al color bg-background
+  );
+  
+  const backdropFilter = useTransform(
+    scrollY,
+    [0, 300],
+    ["blur(0px)", "blur(12px)"] // Efecto de vidrio esmerilado progresivo
+  );
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-7 md:px-16 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-    }`}>
+    <motion.nav 
+      style={{ backgroundColor, backdropFilter }}
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-7 md:px-16"
+    >
       <div className="flex items-start gap-1 text-primary">
         <div className="w-[26px] h-[26px] border-[5.5px] border-primary rounded-full box-border" />
         <div className="text-[12px] font-medium leading-none">3</div>
@@ -61,6 +67,6 @@ export function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 }
