@@ -22,7 +22,10 @@ export function Nav() {
 
   return (
     <motion.nav 
-      style={{ backgroundColor, backdropFilter }}
+      style={{ 
+        backgroundColor: isOpen ? "rgba(5, 5, 5, 0.95)" : backgroundColor, 
+        backdropFilter: isOpen ? "blur(12px)" : backdropFilter 
+      }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-7 md:px-16"
     >
       <div className="flex items-start gap-1 text-primary">
@@ -38,7 +41,7 @@ export function Nav() {
       </div>
       
       <a href="#agendar" className="hidden md:flex p-3 text-nav text-primary border-b border-muted-text pb-1 hover:border-primary transition-colors min-h-[44px] items-center">
-        AGENDAR LLAMADA →
+        Ver video →
       </a>
 
       {/* Botón Hamburguesa Móvil */}
@@ -62,7 +65,7 @@ export function Nav() {
             <a onClick={() => setIsOpen(false)} href="#casos" className="text-nav text-white hover:text-primary transition-colors">CASOS</a>
             <a onClick={() => setIsOpen(false)} href="#ceo" className="text-nav text-white hover:text-primary transition-colors">EQUIPO</a>
             <a onClick={() => setIsOpen(false)} href="#agendar" className="text-nav text-primary border border-primary px-8 py-3 hover:bg-primary hover:text-background transition-colors mt-4">
-              AGENDAR LLAMADA
+              Ver video →
             </a>
           </motion.div>
         )}

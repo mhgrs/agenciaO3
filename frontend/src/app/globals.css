@@ -10,7 +10,7 @@
   --color-secondary: #F2EFE8;
   --color-on-secondary: #111111;
   
-  --color-accent: #B8A88A;
+  --color-accent: #cca351;
   --color-on-accent: #cc9d25;
   
   --color-muted: #111111;
@@ -21,7 +21,7 @@
   --color-border-light: #D6D2C7;
   
   --font-sans: "Manrope", sans-serif;
-  --font-serif: "Instrument Serif", serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @layer base {
@@ -41,9 +41,8 @@
     font-weight: normal;
   }
   
-  .font-serif {
-    font-family: var(--font-serif);
-    font-weight: 400;
+  .font-inter {
+    font-family: var(--font-inter);
   }
   
   /* Utilidades para los textos pequeños (labels/nav) con gran espaciado */

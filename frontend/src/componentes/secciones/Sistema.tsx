@@ -69,7 +69,7 @@ export function Sistema() {
              viewport={{ once: true }}
              transition={{ delay: 0.3 }}
           >
-            <p className="font-serif text-[clamp(19px,2.2vw,28px)] leading-[1.45] text-secondary m-0 mb-8 flex flex-col">
+            <p className="font-inter text-[clamp(19px,2.2vw,28px)] leading-[1.45] text-secondary m-0 mb-8 flex flex-col">
               <span>Liderados por Dante Torres, CEO.</span>
               <span>Llevamos tu negocio al siguiente nivel.</span>
             </p>

@@ -57,7 +57,7 @@ export function Hero() {
       {/* Gradientes oscuros para legibilidad */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/600 to-background/70 z-10" />
       
-      <div className="relative w-full max-w-[1240px] mt-50 md:ms-10 lg:ms-20 z-20">
+      <div className="relative w-full max-w-[1240px] mt-50 ms-[clamp(0rem,1vw,3rem)] lg:ms-20 z-20">
         <motion.div 
           initial={{ opacity: 0 }}
          
@@ -82,7 +82,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1] }}
             transition={{ duration: 1, delay: 1 }}
-            className="font-serif text-[clamp(19px,2.4vw,30px)] leading-[1.4] text-secondary m-0 flex flex-col max-w-[30ch]"
+            className="font-inter text-[clamp(19px,2.4vw,30px)] leading-[1.4] text-secondary m-0 flex flex-col max-w-[30ch]"
           >
             <span>Te voy a revelar algo que no sabes.</span>
             <span className="text-muted-foreground mt-4 text-[clamp(16px,1.5vw,20px)] font-sans font-light">

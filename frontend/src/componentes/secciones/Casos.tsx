@@ -12,7 +12,7 @@ export function Casos() {
   const porcentajeCruce = tiempoDeCruce / duracionTotal;
 
   return (
-    <section className="bg-primary text-on-primary py-[clamp(90px,18vw,280px)] px-5 md:px-16 overflow-hidden">
+    <section className="bg-primary text-on-primary py-[clamp(90px,18vw,250px)] px-5 md:px-16 overflow-hidden">
       <div className="max-w-[1240px] mx-auto flex flex-col items-center justify-center text-center">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -22,7 +22,10 @@ export function Casos() {
           className="w-full"
         >
           <h2 className="text-[clamp(60px,12vw,220px)] font-extralight leading-[0.85] tracking-[-0.04em] text-on-primary mb-6">
-            ¿LISTO PARA<br/>COMENZAR?
+            ¿LISTO PARA<br/>
+          </h2>
+          <h2 className="text-[clamp(60px,12vw,220px)] font-extralight leading-[0.85] tracking-[-0.04em] text-on-primary mb-25">
+            COMENZAR?
           </h2>
           
           <motion.div 

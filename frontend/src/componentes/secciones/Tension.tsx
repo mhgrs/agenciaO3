@@ -31,7 +31,7 @@ export function Tension() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="font-serif text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4"
+              className="font-inter text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4"
             >
               <li className="flex gap-4 border-t border-muted-text/30 pt-4"><span className="text-accent mt-1">↑</span> Empresarios serios que buscan resultados reales y medibles.</li>
               <li className="flex gap-4 border-t border-muted-text/30 pt-4"><span className="text-accent mt-1">↑</span> Empresas B2C que ya facturan +US$15.000 mensuales.</li>
@@ -55,7 +55,7 @@ export function Tension() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="font-serif text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4 text-muted-text md:text-right"
+              className="font-inter text-[clamp(18px,2vw,24px)] leading-[1.6] space-y-4 text-muted-text md:text-right"
             >
               <li className="flex gap-4 md:flex-row-reverse border-t border-muted-text/30 pt-4"><span className="text-on-secondary/50 mt-1">×</span> Estás recién comenzando.</li>
               <li className="flex gap-4 md:flex-row-reverse border-t border-muted-text/30 pt-4"><span className="text-on-secondary/50 mt-1">×</span> No tienes validado tu producto.</li>

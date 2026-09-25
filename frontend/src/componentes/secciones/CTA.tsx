@@ -61,7 +61,7 @@ export function CTA() {
         >
           {enviado ? (
             <div className="text-center py-12 text-primary">
-              <h3 className="text-2xl font-serif mb-2">¡Solicitud Recibida!</h3>
+              <h3 className="text-2xl font-inter mb-2">¡Solicitud Recibida!</h3>
               <p className="text-muted-foreground text-sm font-sans">Nos pondremos en contacto contigo a la brevedad.</p>
             </div>
           ) : (
@@ -140,8 +140,8 @@ export function CTA() {
                   type="submit"
                   className="group w-full max-w-[400px] min-w-[50px] text-[13px] md:text-[14px] tracking-[0.2em] font-medium bg-primary text-background border border-primary px-8 py-5 hover: border-zinc-700 hover:bg-transparent hover:text-primary transition-all duration-300 flex justify-center items-center gap-4 min-h-[56px] rounded-sm"
                 >
-                  <span>SOLICITAR AGENDA AHORA</span>
-                  <span className="text-accent group-hover:text-primary transition-colors">→</span>
+                  <span>SOLICITA AGENDA AHORA</span>
+                  <span className="text-black group-hover:text-primary transition-colors">→</span>
                 </button>
               </div>
             </form>
