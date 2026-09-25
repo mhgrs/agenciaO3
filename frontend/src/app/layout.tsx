@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "O³ — Eleva tu marca.",
+  title: "Eleva tu marca.",
   description: "Hay empresas extraordinarias que todavía parecen ordinarias. O³ Brand OS™.",
   icons: {
     icon: [
