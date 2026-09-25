@@ -28,10 +28,9 @@ export function Nav() {
       }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-7 md:px-16"
     >
-      <div className="flex items-start gap-1 text-primary">
-        <div className="w-[26px] h-[26px] border-[5.5px] border-primary rounded-full box-border" />
-        <div className="text-[12px] font-medium leading-none">3</div>
-      </div>
+      <a href="#" className="flex items-center">
+        <img src="/icon.webp" alt="O3 Logo" className="w-[32px] h-[32px] object-contain" />
+      </a>
       
       {/* Enlaces de Escritorio */}
       <div className="hidden md:flex items-center gap-6 text-nav text-muted-foreground">

@@ -3,10 +3,9 @@ export function Footer() {
     <footer className="bg-background py-[clamp(50px,7vw,84px)] px-5 md:px-16">
       <div className="max-w-[1240px] mx-auto flex flex-wrap gap-8 justify-between items-end">
         
-        <div className="flex items-start gap-1 text-primary">
-          <div className="w-[26px] h-[26px] border-[5.5px] border-primary rounded-full box-border" />
-          <div className="text-[12px] font-medium leading-none">3</div>
-        </div>
+        <a href="#" className="flex items-center">
+          <img src="/icon.webp" alt="O3 Logo" className="w-[32px] h-[32px] object-contain" />
+        </a>
         
         <div className="text-[10px] tracking-[0.22em] text-muted-text leading-[2.2]">
           O3 SPA · AGENCIA DE COMUNICACIONES, MARKETING Y PUBLICIDAD<br />

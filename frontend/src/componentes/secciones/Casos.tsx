@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Casos() {
   return (
-    <section id="casos" className="bg-background text-primary py-[clamp(300px,15vw,350px)] px-5 md:px-16 border-t border-border">
+    <section id="casos" className="bg-background text-primary py-[clamp(200px,15vw,300px)] px-5 md:px-16 border-t border-border">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

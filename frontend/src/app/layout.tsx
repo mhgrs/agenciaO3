@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "O³ — Eleva tu marca.",
   description: "Hay empresas extraordinarias que todavía parecen ordinarias. O³ Brand OS™.",
+  icons: {
+    icon: [
+      { url: '/icon.webp', type: 'image/webp' },
+    ],
+  },
 };
 
 export default function RootLayout({
