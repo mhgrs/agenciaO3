@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 
 export function Casos() {
+  // CONFIGURACIÓN DE LA LUZ DEL BOTÓN
+  const tiempoDeCruce = 1.5; 
+  const tiempoDeEspera = 50; 
+
+  // ¡NO TOCAR ESTO! Es necesario para que Framer Motion no se rompa:
+  const duracionTotal = tiempoDeCruce + tiempoDeEspera;
+  const porcentajeCruce = tiempoDeCruce / duracionTotal;
+
   return (
     <section className="bg-primary text-on-primary py-[clamp(90px,18vw,280px)] px-5 md:px-16 overflow-hidden">
       <div className="max-w-[1240px] mx-auto flex flex-col items-center justify-center text-center">
@@ -26,22 +34,24 @@ export function Casos() {
           >
             <motion.a 
               href="#agendar" 
-              className="relative overflow-hidden group inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-colors min-h-[44px]"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative overflow-hidden bg-black text-white group inline-flex items-center gap-4 text-[12px] md:text-[14px] tracking-[0.3em] text-on-primary border border-on-primary px-8 py-5 hover:bg-on-primary hover:text-primary transition-all duration-300 min-h-[44px]"
             >
               <motion.div
                 initial={{ left: "-150%" }}
                 whileInView={{ left: ["-150%", "200%", "200%"] }}
                 viewport={{ once: false }}
                 transition={{ 
-                  duration: 25, 
-                  times: [0, 0.25, 5], 
+                  duration: duracionTotal, 
+                  times: [0, porcentajeCruce, 1], 
                   ease: "easeInOut",
                   repeat: Infinity
                 }}
                 className="absolute top-0 bottom-0 w-[150%] bg-gradient-to-r from-transparent via-[#cc9d25]/60 to-transparent skew-x-[-30deg] z-0"
               />
-              <span className="relative z-10">VAMOS AL SIGUIENTE NIVEL</span>
-              <span className="relative z-10 text-accent group-hover:text-primary transition-colors">↓</span>
+              <span className="relative z-10 ">VAMOS AL SIGUIENTE NIVEL</span>
+              <span className="relative z-10 text-primary transition-colors">↓</span>
             </motion.a>
           </motion.div>
         </motion.div>

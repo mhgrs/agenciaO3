@@ -43,6 +43,7 @@
   
   .font-serif {
     font-family: var(--font-serif);
+    font-weight: 400;
   }
   
   /* Utilidades para los textos pequeños (labels/nav) con gran espaciado */

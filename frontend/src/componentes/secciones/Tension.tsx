@@ -40,7 +40,7 @@ export function Tension() {
             </motion.ul>
           </div>
           
-          <div className="md:mt-20">
+          <div className="md:mt-10">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
