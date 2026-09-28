@@ -36,7 +36,7 @@ export function Nav() {
       <div className="hidden md:flex items-center gap-6 text-nav text-muted-foreground">
         <a href="#entrenamiento" className="p-3 hover:text-primary text-white transition-colors">METODOLOGÍA</a>
         <a href="#casos" className="p-3 hover:text-primary text-white transition-colors">CASOS</a>
-        <a href="#ceo" className="p-3 hover:text-primary text-white transition-colors">EQUIPO</a>
+        <a href="#equipo" className="p-3 hover:text-primary text-white transition-colors">EQUIPO</a>
       </div>
       
       <a href="#agendar" className="hidden md:flex p-3 text-nav text-primary border-b border-muted-text pb-1 hover:border-primary transition-colors min-h-[44px] items-center">
@@ -62,7 +62,7 @@ export function Nav() {
           >
             <a onClick={() => setIsOpen(false)} href="#entrenamiento" className="text-nav text-white hover:text-primary transition-colors">METODOLOGÍA</a>
             <a onClick={() => setIsOpen(false)} href="#casos" className="text-nav text-white hover:text-primary transition-colors">CASOS</a>
-            <a onClick={() => setIsOpen(false)} href="#ceo" className="text-nav text-white hover:text-primary transition-colors">EQUIPO</a>
+            <a onClick={() => setIsOpen(false)} href="#equipo" className="text-nav text-white hover:text-primary transition-colors">EQUIPO</a>
             <a onClick={() => setIsOpen(false)} href="#agendar" className="text-nav text-primary border border-primary px-8 py-3 hover:bg-primary hover:text-background transition-colors mt-4">
               Ver video →
             </a>
